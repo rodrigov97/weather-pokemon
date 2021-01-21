@@ -1,0 +1,9 @@
+@import "../../../assets/style/variables.scss";
+@import "../../../../node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+
+.footer {
+    height: 60px;
+    -webkit-box-shadow: 2px 8px 33px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 8px 33px -1px rgba(0,0,0,0.75);
+    box-shadow: 2px 8px 33px -1px rgba(0,0,0,0.75);
+}
