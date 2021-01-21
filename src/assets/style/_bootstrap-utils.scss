@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+$enable-responsive-font-sizes: true;
+
+$theme-colors: (
+  danger: $danger,
+  success: $success,
+  info: $info
+);
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
