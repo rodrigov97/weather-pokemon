@@ -2,8 +2,8 @@
 @import "../../../../node_modules/bootstrap/scss/mixins/_breakpoints.scss";
 
 .footer {
-    height: 60px;
-    -webkit-box-shadow: 2px 8px 33px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 8px 33px -1px rgba(0,0,0,0.75);
-    box-shadow: 2px 8px 33px -1px rgba(0,0,0,0.75);
+    height: 3.75rem;
+    -webkit-box-shadow: 0.125rem 0.5rem 2.0625rem -0.0625rem rgba(0,0,0,0.75);
+    -moz-box-shadow: 0.125rem 0.5rem 2.0625rem -0.0625rem rgba(0,0,0,0.75);
+    box-shadow: 0.125rem 0.5rem 2.0625rem -0.0625rem rgba(0,0,0,0.75);
 }

@@ -10,36 +10,36 @@
 /* Navbar */
 
 .navbar {
-    height: 60px;
+    height: 3.75rem;
     align-items: center;
-    -webkit-box-shadow: 0px -8px 33px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px -8px 33px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px -8px 33px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0rem -0.5rem 2.0625rem -0.0625rem rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0rem -0.5rem 2.0625rem -0.0625rem rgba(0, 0, 0, 0.75);
+    box-shadow: 0rem -0.5rem 2.0625rem -0.0625rem rgba(0, 0, 0, 0.75);
 }
 
 .navbar h2 {
     margin: 0;
     margin-right: 1rem;
-    font-size: 25px;
+    font-size: 1.5625rem;
 }
 
 .navbar img {
-    height: 40px;
+    height: 2.5rem;
 }
 
 @include media-breakpoint-down(md) {
     .navbar {
-        height: 60px;
+        height: 3.75rem;
         align-items: center;
     }
 
     .navbar h2 {
         margin: 0;
         margin-right: 1rem;
-        font-size: 23px;
+        font-size: 1.4375rem;
     }
 
     .navbar img {
-        height: 35px;
+        height: 2.1875rem;
     }
 }
