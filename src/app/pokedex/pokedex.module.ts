@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../shared/shared.module';
-
-// App
-import { PokedexComponent } from './pokedex.component';
+import { ReactiveFormsModule } from '@angular/forms';
+// Modules
 import { PokedexRoutingModule } from './pokedex.routing.module';
+import { SharedModule } from '../shared/shared.module';
+// Components
+import { PokedexComponent } from './pokedex.component';
 
 @NgModule({
     declarations: [
-        //App
+        // App
         PokedexComponent
     ],
     imports: [
-        //App
+        // Angular
+        ReactiveFormsModule,
+        // App
         PokedexRoutingModule,
         SharedModule
     ],

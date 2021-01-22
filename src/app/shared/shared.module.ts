@@ -1,21 +1,28 @@
 import { NgModule } from '@angular/core';
-
 // App
-import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormInputComponent } from './components/form-input/form-input.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
-        // Angular
-        NavbarComponent,
-        FooterComponent
+        // App
+        FooterComponent,
+        FormInputComponent,
+        NavbarComponent
     ],
     exports: [
-        // Angular
-        NavbarComponent,
-        FooterComponent
+        // App
+        FooterComponent,
+        FormInputComponent,
+        NavbarComponent
     ],
     imports: [
+        // Angular
+        CommonModule,
+        ReactiveFormsModule
     ],
     providers: []
 })

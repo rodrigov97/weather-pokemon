@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+// Clients
 import { PokemonClient } from './clients/pokemon.api.client';
 import { WeatherClient } from './clients/weather.api.client';
 
@@ -16,7 +17,7 @@ import { ServiceModule } from './services/service.module';
         ServiceModule
     ],
     providers: [
-        // Angular
+        // App
         PokemonClient,
         WeatherClient
     ]

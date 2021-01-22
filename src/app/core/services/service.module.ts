@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
+// Services
+import { ErrorHandlerService } from './error-handler.service';
 
 @NgModule({
-    declarations: [
-    ],
-    imports: [
-    ],
-    providers: []
+    providers: [
+        ErrorHandlerService
+    ]
 })
 export class ServiceModule { }

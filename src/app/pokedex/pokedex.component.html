@@ -1,3 +1,18 @@
 <section class="pokedex-section">
 
+    <form [formGroup]="formCity" (submit)="getPokemon()">
+
+        <app-form-input
+            [control]="controls.cityName"
+            [trim]="true"
+            type="text"
+            fieldId=""
+            label=""
+            name=""
+            placeholder=""
+        ></app-form-input>
+
+    </form>
+
+
 </section>

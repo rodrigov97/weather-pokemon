@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-pokedex',
@@ -7,9 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokedexComponent implements OnInit {
 
-  constructor() { }
+  formCity: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+
+    this.initForm();
+  }
+
+  initForm(): void {
+
+    this.formCity = this.formBuilder.group({
+      cityName: [null, Validators.required]
+    });
+  }
+
+  getPokemon(): void {
+    if (this.isFormValid) {
+
+    }
+  }
+
+  get isFormValid(): boolean {
+    return this.formCity.valid;
+  }
+
+  get controls(): { [key: string]: AbstractControl; } {
+    return this.formCity.controls;
   }
 
 }
