@@ -38,23 +38,23 @@ One time the project is running, access the port 4200 in your browser `http://lo
 
 In the single page of this app, there will be a input field so you can insert the city name.
 
-![Main](/src/assets/screenshots/main.png?raw=true =200x)
+![Main](/src/assets/screenshots/main.png =200x?raw=true)
 
 Once the city is inserted, just press enter or click the search button. After some seconds the data wil be displayed on screen.
 
-![Result](/src/assets/screenshots/result.png?raw=true =200x)
+![Result](/src/assets/screenshots/result.png =200x?raw=true)
 
 This screen will appear if no city was found.
 
-![Not Found](/src/assets/screenshots/not-found.png?raw=true =200x)
+![Not Found](/src/assets/screenshots/not-found.png =200x?raw=true)
 
 This one if the api key for the OpenweatherMap is invalid.
 
-![Unauthorized](/src/assets/screenshots/unauthorized.png?raw=true =200x)
+![Unauthorized](/src/assets/screenshots/unauthorized.png =200x?raw=true)
 
 And this if the input has no value inserted.
 
-![Empty](/src/assets/screenshots/empty.png?raw=true =200x)
+![Empty](/src/assets/screenshots/empty.png =200x?raw=true)
 
 
 ## Mobile
