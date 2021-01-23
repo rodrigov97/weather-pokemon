@@ -1,6 +1,17 @@
 # WeatherPokemon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6. in a linux Ubuntu 20.04.
+
+# Technologies used
+
+* Angular CLI;
+* Docker;
+* Git (To store the project);
+
+# Softwares
+
+* Chrome browser;
+* Visual Studio Code;
 
 ## Development server
 
