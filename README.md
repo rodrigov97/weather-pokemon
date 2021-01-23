@@ -59,9 +59,7 @@ And this if the input has no value inserted.
 
 ## Mobile
 
-
-![Mobile Main](/src/assets/screenshots/mobile-main.png?raw=true)
-
-
-![Mobile Result](/src/assets/screenshots/mobile-result.png?raw=true)
+:-------------------------:|:-------------------------:
+![Mobile Main](/src/assets/screenshots/mobile-main.png?raw=true) | ![Mobile Result](/src/assets/screenshots/mobile-result.png?raw=true)
+:-------------------------:|:-------------------------:
 
