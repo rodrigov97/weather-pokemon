@@ -54,4 +54,4 @@ This one if the api key for the OpenweatherMap is invalid.
 
 And this if the input has no value inserted.
 
-![Empty cty name](https://drive.google.com/uc?export=view&id=1Jv4qoZHWLYrgB1X6qGv0zxTiA7lNBuFr/)
+![Empty city name](https://drive.google.com/uc?export=view&id=1Jv4qoZHWLYrgB1X6qGv0zxTiA7lNBuFr/)
