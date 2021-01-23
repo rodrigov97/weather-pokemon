@@ -1,0 +1,32 @@
+<div [class.lableless]="!label" class="form-group">
+
+    <label [class.is-invalid]="isInvalid()" [for]="fieldId" *ngIf="!!label">
+      {{ label }}
+    </label>
+  
+    <div class="input-group">
+  
+      <ng-container [ngSwitch]="type">
+  
+        <input
+          *ngSwitchCase="'text'"
+          [name]="name"
+          [formControl]="control"
+          [id]="fieldId"
+          [placeholder]="placeholder"
+          [type]="type"
+          class="form-control"
+          (blur)="onBlur()"
+        />
+  
+      </ng-container>
+  
+    </div>
+    
+    <div>
+      <small *ngIf="isInvalid() && !hideError" class="d-inline invalid-feedback">
+        {{ forceErrorMessage || errorMessage }}
+      </small>
+    </div>
+</div>
+  

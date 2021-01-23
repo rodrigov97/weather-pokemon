@@ -1,0 +1,44 @@
+<section class="error-container">
+
+    <ng-container [ngSwitch]="error.type">
+
+        <div *ngSwitchCase="'Empty'">
+
+            <h2>Não sou um pokémon psíquico, insira uma cidade pra continuar...</h2>
+    
+            <div class="error-image d-flex align-items-center justify-content-center">
+    
+                <img src="assets/media/images/psyduck.png" alt="">
+    
+            </div>
+    
+        </div>
+    
+        <div *ngSwitchCase="'Not Found'">
+    
+            <h2>Não foi possível localizar essa cidade, por favor tente novamente.</h2>
+    
+            <div class="error-icon d-flex align-items-center justify-content-center">
+    
+                <i class="fas fa-search"></i>
+    
+            </div>
+    
+        </div>
+
+            
+        <div *ngSwitchCase="'Unauthorized'">
+    
+            <h2>Não foi possível localizar essa cidade, por favor verifique se possuí autorização para visualizar os dados.</h2>
+    
+            <div class="error-icon d-flex align-items-center justify-content-center">
+    
+                <i class="fas fa-times-circle"></i>
+    
+            </div>
+    
+        </div>
+
+    </ng-container>
+
+</section>

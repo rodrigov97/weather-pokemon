@@ -1,0 +1,23 @@
+@import "./bootstrap-utils";
+@import "./_variables.scss";
+@import "~bootstrap/scss/bootstrap";
+
+.btn,
+.btn:focus,
+.btn:active,
+.btn.btn-primary,
+.btn.btn-primary:focus,
+.btn.btn-primary:hover {
+    outline: none !important;
+    color: $grey-dark !important;
+    box-shadow: none !important;
+    border: 0.0625rem solid rgb(185, 185, 185);
+    border-radius: 62.4375rem;
+    background-color: $grey-light;
+}
+
+.btn.btn-primary:active {
+    color: $grey-light !important;
+    background-color: $grey-dark !important;
+    border: 0.0625rem solid rgb(185, 185, 185) !important;
+}
