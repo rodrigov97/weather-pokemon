@@ -7,32 +7,52 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Angular CLI;
 * Docker;
 * Git (To store the project);
+* Yarn;
 
 # Softwares
 
 * Chrome browser;
 * Visual Studio Code;
 
-## Development server
+# How to use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## With Docker
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run the command `docker-compose up` to initiate the container, if you dont have the image, he will create it for you;
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## With ng serve
 
-## Running end-to-end tests
+Run the command `yarn` to install all project dependencies.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Once the installation is done run the command `ng serve` on the terminal to start the application.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Once the project is running access the port 4200 in your browser `http://localhost:4200/`.
+
+
+## Using the application
+
+In the single page of this app, there will be a input field so you can insert the city name.
+
+![image](https://drive.google.com/uc?export=view&id=17MNR8ocYTsw4SkK_R9MqwYNNynW12A_5)
+
+Once the city is inserted, just press enter or click the search button. After some seconds the data wil be displayed on screen.
+
+![image](https://drive.google.com/uc?export=view&id=1qTWqkOmN1tcMT5OrG8LF38g0sA_RhdoI)
+
+This screen will appear if no city was found.
+
+![image](https://drive.google.com/uc?export=view&id=10X6nIUpZDMrOOMSaRd-p_L4vvWAa-S5-)
+
+This one if the api key for the OpenweatherMap is invalid.
+
+![image](https://drive.google.com/uc?export=view&id=1WWjSMKe2eDdiHQyd3FzSGlpsVTKWRMce)
+
+And this if the input has no value inserted.
+
+![image](https://drive.google.com/uc?export=view&id=1Jv4qoZHWLYrgB1X6qGv0zxTiA7lNBuFr/)
