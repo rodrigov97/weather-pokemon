@@ -38,7 +38,7 @@ One time the project is running, access the port 4200 in your browser `http://lo
 
 In the single page of this app, there will be a input field so you can insert the city name.
 
-![Main](/src/assets/screenshots/main.png=200x)
+<img src="/src/assets/screenshots/main.png" alt="Main" width="200" height="auto">
 
 Once the city is inserted, just press enter or click the search button. After some seconds the data wil be displayed on screen.
 
@@ -59,7 +59,6 @@ And this if the input has no value inserted.
 
 ## Mobile
 
-:-------------------------:|:-------------------------:
 ![Mobile Main](/src/assets/screenshots/mobile-main.png?raw=true) | ![Mobile Result](/src/assets/screenshots/mobile-result.png?raw=true)
 :-------------------------:|:-------------------------:
 
