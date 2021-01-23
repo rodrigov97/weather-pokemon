@@ -3,7 +3,16 @@
 
 .footer {
     height: 3.75rem;
-    -webkit-box-shadow: 0.0625rem 0.0625rem 1.8125rem -0.5rem rgba(0,10,18,1);
-    -moz-box-shadow: 0.0625rem 0.0625rem 1.8125rem -0.5rem rgba(0,10,18,1);
-    box-shadow: 0.0625rem 0.0625rem 1.8125rem -0.5rem rgba(0,10,18,1);
+    -webkit-box-shadow: 0.0625rem 0.0625rem 1.8125rem -0.5rem rgba(0, 10, 18, 1);
+    -moz-box-shadow: 0.0625rem 0.0625rem 1.8125rem -0.5rem rgba(0, 10, 18, 1);
+    box-shadow: 0.0625rem 0.0625rem 1.8125rem -0.5rem rgba(0, 10, 18, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i {
+    font-size: 2rem;
+    color: #2b2b2b;
+    cursor: pointer;
 }
