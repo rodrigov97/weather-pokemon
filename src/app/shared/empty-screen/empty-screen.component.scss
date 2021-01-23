@@ -1,7 +1,7 @@
 @import "../../../assets/style/_variables.scss";
 @import "../../../../node_modules/bootstrap/scss/mixins/_breakpoints.scss";
 
-.error-container {
+.empty-container {
     height: 100%;
     width: 100%;
     padding: 1rem;
@@ -10,20 +10,29 @@
     justify-content: center;
 }
 
-.error-container h2 {
+.empty-container h2 {
     text-align: center;
 }
 
-.error-image {
+.empty-image {
     margin-top: 4rem;
 }
 
-.error-image img {
+.empty-image img {
+    height: 200px;
+    width: auto;
     border-radius: 50%;
 }
 
+@include media-breakpoint-up(lg) {
+    .empty-image img {
+        height: 200px;
+        width: auto;
+    }
+}
+
 @include media-breakpoint-down(md) {
-    .error-image img {
+    .empty-image img {
         height: 140px;
         width: auto;
     }

@@ -29,36 +29,40 @@
             <app-error-screen></app-error-screen>
         </div>
 
-        <!-- <div class="error-screen" *ngIf="hasError">
-            <app-error-screen></app-error-screen>
-        </div> -->
-
-        <div class="weather-information" *ngIf="!hasError">
-
-            <ul class="info-list">
-                <div>
-                    <li> <i class="fas fa-building"></i> Cidade </li>
-                    <li> <i class="fas fa-thermometer-quarter"></i> Temperatura: </li>
-                    <li><i class="fa fa-cloud-showers-heavy"></i> Chovendo: </li>
-                </div>
-            </ul>
-
+        <div class="error-screen" *ngIf="!hasError && !hasPreviousSearch">
+            <app-empty-screen></app-empty-screen>
         </div>
 
-        <div class="divider" *ngIf="!hasError"></div>
+        <ng-container *ngIf="!hasError && hasPreviousSearch">
 
-        <div class="pokemon-information" *ngIf="!hasError">
+            <div class="weather-information" >
 
-            <ul class="pokemon-info">
-                <li class="name">Nome</li>
-                <li><app-types [type]="controls.cityName.value"></app-types></li>
-            </ul>
-
-            <div class="pokemon">
-
+                <ul class="info-list">
+                    <div>
+                        <li> <i class="fas fa-building"></i> Cidade </li>
+                        <li> <i class="fas fa-thermometer-quarter"></i> Temperatura: </li>
+                        <li><i class="fa fa-cloud-showers-heavy"></i> Chovendo: </li>
+                    </div>
+                </ul>
+    
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="pokemon-information">
+    
+                <ul class="pokemon-info">
+                    <li class="name">Nome</li>
+                    <li><app-types [type]="controls.cityName.value"></app-types></li>
+                </ul>
+    
+                <div class="pokemon">
+    
+                </div>
+    
             </div>
 
-        </div>
+        </ng-container>
 
     </div>
 

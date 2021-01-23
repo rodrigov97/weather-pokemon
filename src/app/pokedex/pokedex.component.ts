@@ -12,6 +12,8 @@ export class PokedexComponent implements OnInit {
 
   hasError: boolean = false;
 
+  hasPreviousSearch: boolean = false;
+
   constructor(
     private formBuilder: FormBuilder
   ) { }
@@ -31,6 +33,7 @@ export class PokedexComponent implements OnInit {
   getPokemon(): void {
     if (this.isFormValid) {
       this.hasError = false;
+      this.hasPreviousSearch = true;
 
     }
     else {

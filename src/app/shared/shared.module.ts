@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TypesComponent } from './types/types.component';
 import { ErrorScreenComponent } from './error-screen/error-screen.component';
+import { EmptyScreenComponent } from './empty-screen/empty-screen.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { ErrorScreenComponent } from './error-screen/error-screen.component';
         FormInputComponent,
         NavbarComponent,
         TypesComponent,
-        ErrorScreenComponent
+        ErrorScreenComponent,
+        EmptyScreenComponent
     ],
     exports: [
         // App
@@ -23,7 +25,8 @@ import { ErrorScreenComponent } from './error-screen/error-screen.component';
         FormInputComponent,
         NavbarComponent,
         TypesComponent,
-        ErrorScreenComponent
+        ErrorScreenComponent,
+        EmptyScreenComponent
     ],
     imports: [
         // Angular
