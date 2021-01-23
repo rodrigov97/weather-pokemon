@@ -22,13 +22,23 @@ export class PokemonClient {
         private http: HttpClient
     ) { }
 
-    getPokemon(path: string, options?: HttpOptions): Observable<any> {
-        return this.http.get(this.pokemonApiUrl(path), options)
+    getPokemonByType(path: string, options?: HttpOptions): Observable<any> {
+        return this.http.get(this.pokemonApiTypeUrl(path), options)
     }
 
-    private pokemonApiUrl(typeName: string): string {
+    getPokemonByName(path: string, options?: HttpOptions): Observable<any> {
+        return this.http.get(this.pokemonApiNameUrl(path), options)
+    }
+
+    private pokemonApiTypeUrl(typeName: string): string {
         const type = `type/${typeName}`;
 
         return [this.pokemonAPi, type].filter(Boolean).join('');
+    }
+
+    private pokemonApiNameUrl(pokemon: string): string {
+        const name = `pokemon/${pokemon}`;
+
+        return [this.pokemonAPi, name].filter(Boolean).join('');
     }
 }

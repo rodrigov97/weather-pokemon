@@ -61,7 +61,7 @@ export class PokedexComponent implements OnInit {
 
           this.isLoading = false;
           this.hasError = true;
-          this.errorType = '404';
+          this.errorType = error.error.code;
           return this.pokeService.parseError(error.error);
         });
 
@@ -74,18 +74,38 @@ export class PokedexComponent implements OnInit {
 
   getPokemon(temp: number): void {
     var type = this.weatherData.isRaining ? 'eletric' : this.typeHandler.getPokemonType(temp);
-    
+
     this.pokeService.getPokemonByType(type).subscribe(
       (response) => {
 
         this.isLoading = false;
         this.pokemonData = this.pokeService.parsePokemonResponse(response);
+
+        this.getPokemonByName(this.pokemonData);
       },
       (error) => {
 
         this.isLoading = false;
         this.hasError = true;
-        this.errorType = '404';
+        this.errorType = error.error.code;
+        return this.pokeService.parseError(error.error);
+      });
+  }
+
+
+  getPokemonByName(pokemon: Pokemon): void {
+
+    this.pokeService.getPokemonByName(pokemon.name.toLowerCase()).subscribe(
+      (response) => {
+
+        this.isLoading = false;
+        this.pokemonData = this.pokeService.addPokemonAttr(response, pokemon);
+      },
+      (error) => {
+
+        this.isLoading = false;
+        this.hasError = true;
+        this.errorType = error.error.code;
         return this.pokeService.parseError(error.error);
       });
   }

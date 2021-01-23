@@ -48,9 +48,16 @@
 /* Pokemon Information */
 
 .pokemon-information .pokemon-info {
-    height: 100%;
     list-style: none;
     text-align: center;
+}
+
+.pokemon {
+    height: calc(100% - 5rem);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Error Screen */
@@ -120,8 +127,14 @@
     }
 
     .pokemon-information .pokemon-info {
+        height: 5rem;
         font-size: 1.375rem;
         font-weight: bold;
+    }
+
+    .pokemon img {
+        height: 12.5rem;
+        width: auto;
     }
 }
 
@@ -175,6 +188,7 @@
     }
 
     .pokemon-information .pokemon-info {
+        height: 7rem;
         font-size: 1.375rem;
         font-weight: bold;
         display: block;
@@ -182,5 +196,10 @@
         line-height: 2.5rem;
         font-weight: bold;
         text-align: center;
+    }
+
+    .pokemon img {
+        height: 9.375rem;
+        width: auto;
     }
 }

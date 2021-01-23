@@ -23,7 +23,7 @@
 
     </form>
 
-    <div class="content">
+    <div class="content" *ngIf="!isLoading">
 
         <div class="error-screen" *ngIf="hasError">
             <app-error-screen [type]="errorType"></app-error-screen>
@@ -61,7 +61,7 @@
                 </ul>
     
                 <div class="pokemon">
-    
+                    <img [src]="pokemonData.image" alt="">
                 </div>
     
             </div>
