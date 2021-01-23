@@ -74,7 +74,7 @@ export class PokedexComponent implements OnInit {
   }
 
   getPokemon(temp: number): void {
-    var type = this.weatherData.isRaining ? 'eletric' : this.typeHandler.getPokemonType(temp);
+    var type = this.weatherData.isRaining ? 'electric' : this.typeHandler.getPokemonType(temp);
 
     this.pokeService.getPokemonByType(type).subscribe(
       (response) => {

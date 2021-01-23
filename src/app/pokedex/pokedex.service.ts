@@ -28,8 +28,8 @@ export class PokedexService {
 
     parseWeatherResponse(json: any): Weather {
         var attr = {
-            name: json.name,
-            description: json.weather[0].description,
+            name: `${json.name} - ${json.sys.country}`,
+            description: json.weather[0].description.charAt(0).toUpperCase() + json.weather[0].description.slice(1),
             isRaining: json.weather[0].main.includes('Rain'),
             temperature: json.main.temp,
             tempMin: json.main.temp_max,
