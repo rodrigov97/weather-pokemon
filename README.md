@@ -38,20 +38,30 @@ One time the project is running, access the port 4200 in your browser `http://lo
 
 In the single page of this app, there will be a input field so you can insert the city name.
 
-![Home page](https://drive.google.com/uc?export=view&id=17MNR8ocYTsw4SkK_R9MqwYNNynW12A_5)
+<img src="/src/assets/screenshots/main.png" alt="Main" width="600" height="auto">
+
 
 Once the city is inserted, just press enter or click the search button. After some seconds the data wil be displayed on screen.
 
-![Rearch Results](https://drive.google.com/uc?export=view&id=1qTWqkOmN1tcMT5OrG8LF38g0sA_RhdoI)
+<img src="/src/assets/screenshots/result.png" alt="Result" width="600" height="auto">
+
 
 This screen will appear if no city was found.
 
-![Not Found](https://drive.google.com/uc?export=view&id=10X6nIUpZDMrOOMSaRd-p_L4vvWAa-S5-)
+<img src="/src/assets/screenshots/not-found.png" alt="Not Found" width="600" height="auto">
+
 
 This one if the api key for the OpenweatherMap is invalid.
 
-![Unauthorized](https://drive.google.com/uc?export=view&id=1WWjSMKe2eDdiHQyd3FzSGlpsVTKWRMce)
+<img src="/src/assets/screenshots/unauthorized.png" alt="Unauthorized" width="600" height="auto">
+
 
 And this if the input has no value inserted.
 
-![Empty city name](https://drive.google.com/uc?export=view&id=1Jv4qoZHWLYrgB1X6qGv0zxTiA7lNBuFr/)
+<img src="/src/assets/screenshots/empty.png" alt="Empty" width="600" height="auto">
+
+
+## Mobile
+<img src="/src/assets/screenshots/mobile-main.png" alt="Empty" width="auto" height="600"> | <img src="/src/assets/screenshots/mobile-result.png" alt="Empty" width="auto" height="600">
+:-------------------------:|:-------------------------:
+
