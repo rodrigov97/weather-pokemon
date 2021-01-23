@@ -16,8 +16,11 @@ export interface HttpOptions {
 
 @Injectable()
 export class WeatherClient {
-    private readonly weatherAPi = `api.openweathermap.org/data/2.5/`;
-    private readonly apiKey = `appid=${environment.weatherKey}`;
+    private readonly weatherAPi = `https://api.openweathermap.org/data/2.5/`;
+    private readonly apiKey = `appid=${environment.weatherKey}&`;
+    private readonly units = `units=metric&`;
+    private readonly lang = 'lang=pt_br';
+
 
     constructor(
         private http: HttpClient
@@ -30,6 +33,6 @@ export class WeatherClient {
     private weatherApiUrl(cityName: string): string {
         const city = `weather?q=${cityName}&`;
 
-        return [this.weatherAPi, city, this.apiKey].filter(Boolean).join('/');
+        return [this.weatherAPi, city, this.apiKey, this.units, this.lang].filter(Boolean).join('');
     }
 }

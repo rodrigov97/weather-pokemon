@@ -1,4 +1,4 @@
-const WEATHER_KEY = '',
+const WEATHER_KEY = 'a34e90f0e182da7da30af57a828541a7',
   POKE_KEY = '';
 
 export const environment = {

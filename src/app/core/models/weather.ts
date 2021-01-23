@@ -1,4 +1,5 @@
 export interface WeatherAttributes {
+    name: string;
     description: string;
     isRaining: boolean;
     temperature: number;
@@ -7,6 +8,7 @@ export interface WeatherAttributes {
 }
 
 export class Weather {
+    name: string;
     description: string;
     isRaining: boolean;
     temperature: number;
@@ -14,6 +16,7 @@ export class Weather {
     tempMax: number;
 
     constructor(attr: WeatherAttributes) {
+        this.name = attr.name;
         this.description = attr.description;
         this.isRaining = attr.isRaining;
         this.temperature = attr.temperature;

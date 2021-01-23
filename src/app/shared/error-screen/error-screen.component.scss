@@ -22,9 +22,21 @@
     border-radius: 50%;
 }
 
+@include media-breakpoint-up(lg) {
+    .error-icon i {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+}
+
 @include media-breakpoint-down(md) {
     .error-image img {
         height: 8.75rem;
         width: auto;
+    }
+
+    .error-icon i {
+        font-size: 2rem;
+        margin-top: 2rem;
     }
 }

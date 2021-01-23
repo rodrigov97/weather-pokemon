@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Weather } from '../core/models/weather';
+import { PokedexService } from './pokedex.service';
 
 @Component({
   selector: 'app-pokedex',
@@ -8,14 +10,20 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 })
 export class PokedexComponent implements OnInit {
 
+  isLoading: boolean = false;
+
   formCity: FormGroup;
 
   hasError: boolean = false;
+  errorType: string = '';
 
   hasPreviousSearch: boolean = false;
 
+  weatherData: Weather;
+
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private pokeService: PokedexService
   ) { }
 
   ngOnInit(): void {
@@ -30,14 +38,31 @@ export class PokedexComponent implements OnInit {
     });
   }
 
-  getPokemon(): void {
+  getCityWeather(): void {
     if (this.isFormValid) {
       this.hasError = false;
       this.hasPreviousSearch = true;
 
+      this.isLoading = true;
+
+      this.pokeService.getWeatherByCityName(this.cityName).subscribe(
+        (response) => {
+
+          this.isLoading = false;
+          this.weatherData = this.pokeService.parseWeatherResponse(response);
+        },
+        (error) => {
+
+          this.isLoading = false;
+          this.hasError = true;
+          this.errorType = '404';
+          return this.pokeService.parseError(error.error);
+        });
+
     }
     else {
       this.hasError = true;
+      this.errorType = 'empty';
     }
   }
 
@@ -49,4 +74,7 @@ export class PokedexComponent implements OnInit {
     return this.formCity.controls;
   }
 
+  get cityName(): string {
+    return this.controls.cityName.value;
+  }
 }
