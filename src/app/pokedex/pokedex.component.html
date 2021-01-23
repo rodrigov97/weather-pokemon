@@ -26,7 +26,7 @@
     <div class="content" *ngIf="!isLoading">
 
         <div class="error-screen" *ngIf="hasError">
-            <app-error-screen [type]="errorType"></app-error-screen>
+            <app-error-screen [error]="error"></app-error-screen>
         </div>
 
         <div class="error-screen" *ngIf="!hasError && !hasPreviousSearch">

@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+// Components
+import { CommonModule } from '@angular/common';
+import { PokedexComponent } from './pokedex.component';
 // Modules
 import { PokedexRoutingModule } from './pokedex.routing.module';
 import { SharedModule } from '../shared/shared.module';
-// Components
-import { PokedexComponent } from './pokedex.component';
-import { CommonModule } from '@angular/common';
+//Services
 import { PokedexService } from './pokedex.service';
 
 @NgModule({

@@ -1,32 +1,33 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-// App
+// Components
+import { EmptyScreenComponent } from './empty-screen/empty-screen.component';
+import { ErrorScreenComponent } from './error-screen/error-screen.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormInputComponent } from './components/form-input/form-input.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { TypesComponent } from './types/types.component';
-import { ErrorScreenComponent } from './error-screen/error-screen.component';
-import { EmptyScreenComponent } from './empty-screen/empty-screen.component';
+// Modules
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
         // App
+        EmptyScreenComponent,
+        ErrorScreenComponent,
         FooterComponent,
         FormInputComponent,
         NavbarComponent,
-        TypesComponent,
-        ErrorScreenComponent,
-        EmptyScreenComponent
+        TypesComponent
     ],
     exports: [
         // App
+        EmptyScreenComponent,
+        ErrorScreenComponent,
         FooterComponent,
         FormInputComponent,
         NavbarComponent,
-        TypesComponent,
-        ErrorScreenComponent,
-        EmptyScreenComponent
+        TypesComponent
     ],
     imports: [
         // Angular

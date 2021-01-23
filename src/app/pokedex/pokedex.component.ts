@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Pokemon } from '../core/models/pokemon';
-import { Weather } from '../core/models/weather';
-import { TypeHandlerService } from '../core/services/type-handler.service';
+import { Component, OnInit } from '@angular/core';
 import { PokedexService } from './pokedex.service';
+import { Pokemon } from '../core/models/pokemon';
+import { TypeHandlerService } from '../core/services/type-handler.service';
+import { Weather } from '../core/models/weather';
 
 @Component({
   selector: 'app-pokedex',
@@ -17,7 +17,7 @@ export class PokedexComponent implements OnInit {
   formCity: FormGroup;
 
   hasError: boolean = false;
-  errorType: string = '';
+  error: any;
 
   hasPreviousSearch: boolean = false;
 
@@ -52,7 +52,6 @@ export class PokedexComponent implements OnInit {
       this.pokeService.getWeatherByCityName(this.cityName).subscribe(
         (response) => {
 
-          this.isLoading = false;
           this.weatherData = this.pokeService.parseWeatherResponse(response);
 
           this.getPokemon(this.weatherData.temperature);
@@ -61,14 +60,16 @@ export class PokedexComponent implements OnInit {
 
           this.isLoading = false;
           this.hasError = true;
-          this.errorType = error.error.code;
-          return this.pokeService.parseError(error.error);
+          this.error = this.pokeService.parseError(error.error);
         });
 
     }
     else {
       this.hasError = true;
-      this.errorType = 'empty';
+      this.error = {
+        code: 'None',
+        type: 'Empty'
+      };
     }
   }
 
@@ -87,8 +88,7 @@ export class PokedexComponent implements OnInit {
 
         this.isLoading = false;
         this.hasError = true;
-        this.errorType = error.error.code;
-        return this.pokeService.parseError(error.error);
+        this.error = this.pokeService.parseError(error.error);
       });
   }
 
@@ -105,8 +105,7 @@ export class PokedexComponent implements OnInit {
 
         this.isLoading = false;
         this.hasError = true;
-        this.errorType = error.error.code;
-        return this.pokeService.parseError(error.error);
+        this.error = this.pokeService.parseError(error.error);
       });
   }
 

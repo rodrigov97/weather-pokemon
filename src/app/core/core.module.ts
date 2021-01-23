@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 // Clients
 import { PokemonClient } from './clients/pokemon.api.client';
 import { WeatherClient } from './clients/weather.api.client';
-
-// App
+// Modules
 import { ServiceModule } from './services/service.module';
 
 @NgModule({

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-// Clients
-import { PokemonClient } from '../core/clients/pokemon.api.client';
-import { WeatherClient } from '../core/clients/weather.api.client';
+// Clients and Models
 import { Pokemon } from '../core/models/pokemon';
+import { PokemonClient } from '../core/clients/pokemon.api.client';
 import { Weather } from '../core/models/weather';
+import { WeatherClient } from '../core/clients/weather.api.client';
 
 @Injectable()
 export class PokedexService {
@@ -73,14 +73,15 @@ export class PokedexService {
     }
 
     parseError(error: any): {} {
-        if (error.cod === '404') {
+        
+        if (error.cod == 404) {
             return error = {
                 code: error.cod,
                 type: 'Not Found',
                 message: 'Cidade não encontrada !'
             };
         }
-        else if (error.cod === '401') {
+        else if (error.cod == 401) {
             return error = {
                 code: error.cod,
                 type: 'Unauthorized',
