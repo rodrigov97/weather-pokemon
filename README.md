@@ -38,7 +38,7 @@ One time the project is running, access the port 4200 in your browser `http://lo
 
 In the single page of this app, there will be a input field so you can insert the city name.
 
-![Main](/src/assets/screenshots/main.png=200x?raw=true)
+![Main](/src/assets/screenshots/main.png=200x)
 
 Once the city is inserted, just press enter or click the search button. After some seconds the data wil be displayed on screen.
 
