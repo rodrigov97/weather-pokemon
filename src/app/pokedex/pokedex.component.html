@@ -56,8 +56,8 @@
             <div class="pokemon-information">
     
                 <ul class="pokemon-info">
-                    <li class="name">Nome</li>
-                    <li><app-types [type]="controls.cityName.value"></app-types></li>
+                    <li class="name">{{pokemonData.name}}</li>
+                    <li><app-types [type]="pokemonData.type"></app-types></li>
                 </ul>
     
                 <div class="pokemon">

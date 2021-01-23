@@ -16,11 +16,19 @@ export interface HttpOptions {
 
 @Injectable()
 export class PokemonClient {
-    private readonly pokemonAPi = ``;
-    private readonly apiKey = `${environment.pokemonKey}`;
+    private readonly pokemonAPi = `https://pokeapi.co/api/v2/`;
 
     constructor(
         private http: HttpClient
     ) { }
 
+    getPokemon(path: string, options?: HttpOptions): Observable<any> {
+        return this.http.get(this.pokemonApiUrl(path), options)
+    }
+
+    private pokemonApiUrl(typeName: string): string {
+        const type = `type/${typeName}`;
+
+        return [this.pokemonAPi, type].filter(Boolean).join('');
+    }
 }
