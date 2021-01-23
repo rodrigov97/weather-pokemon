@@ -5,6 +5,7 @@ import { PokedexRoutingModule } from './pokedex.routing.module';
 import { SharedModule } from '../shared/shared.module';
 // Components
 import { PokedexComponent } from './pokedex.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -13,6 +14,7 @@ import { PokedexComponent } from './pokedex.component';
     ],
     imports: [
         // Angular
+        CommonModule,
         ReactiveFormsModule,
         // App
         PokedexRoutingModule,

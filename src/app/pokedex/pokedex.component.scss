@@ -16,12 +16,12 @@
 }
 
 .form-city .btn-search {
-    height: 45px;
-    border-radius: 100px;
+    height: 2.8125rem;
+    border-radius: 6.25rem;
 }
 
 .form-city .btn-search .icon {
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 /* Content */
@@ -41,7 +41,7 @@
 }
 
 .weather-information .info-list i {
-    width: 40px;
+    width: 2.5rem;
     text-align: center;
 }
 
@@ -51,6 +51,13 @@
     height: 100%;
     list-style: none;
     text-align: center;
+}
+
+/* Error Screen */
+
+.error-screen {
+    width: 100%;
+    height: 100%;
 }
 
 @include media-breakpoint-up(lg) {
@@ -67,7 +74,7 @@
     }
 
     .form-city .btn-search {
-        width: 120px;
+        width: 7.5rem;
         margin-left: 1rem;
     }
 
@@ -83,7 +90,7 @@
 
     .weather-information {
         width: 50%;
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 
     .weather-information .info-list {
@@ -91,16 +98,16 @@
     }
 
     .weather-information .info-list li {
-        line-height: 70px;
+        line-height: 4.375rem;
     }
 
     .weather-information .info-list i {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .divider {
         height: 80%;
-        width: 1px;
+        width: 0.0625rem;
         background-color: $grey;
     }
 
@@ -113,7 +120,7 @@
     }
 
     .pokemon-information .pokemon-info {
-        font-size: 22px;
+        font-size: 1.375rem;
         font-weight: bold;
     }
 }
@@ -131,7 +138,7 @@
     }
 
     .form-city .btn-search {
-        width: 170px;
+        width: 10.625rem;
         margin-top: 0.5rem;
     }
 
@@ -145,15 +152,15 @@
 
     .weather-information {
         width: 100%;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .weather-information .info-list {
-        padding-left: 20px !important;
+        padding-left: 1.25rem !important;
     }
 
     .weather-information .info-list li {
-        line-height: 50px;
+        line-height: 3.125rem;
     }
 
     .divider {
@@ -164,15 +171,15 @@
 
     .pokemon-information {
         width: 100%;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .pokemon-information .pokemon-info {
-        font-size: 22px;
+        font-size: 1.375rem;
         font-weight: bold;
         display: block;
-        padding: 0px !important;
-        line-height: 40px;
+        padding: 0rem !important;
+        line-height: 2.5rem;
         font-weight: bold;
         text-align: center;
     }

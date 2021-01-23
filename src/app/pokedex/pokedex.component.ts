@@ -10,6 +10,8 @@ export class PokedexComponent implements OnInit {
 
   formCity: FormGroup;
 
+  hasError: boolean = false;
+
   constructor(
     private formBuilder: FormBuilder
   ) { }
@@ -28,7 +30,11 @@ export class PokedexComponent implements OnInit {
 
   getPokemon(): void {
     if (this.isFormValid) {
+      this.hasError = false;
 
+    }
+    else {
+      this.hasError = true;
     }
   }
 

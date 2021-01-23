@@ -25,7 +25,15 @@
 
     <div class="content">
 
-        <div class="weather-information">
+        <div class="error-screen" *ngIf="hasError">
+            <app-error-screen></app-error-screen>
+        </div>
+
+        <!-- <div class="error-screen" *ngIf="hasError">
+            <app-error-screen></app-error-screen>
+        </div> -->
+
+        <div class="weather-information" *ngIf="!hasError">
 
             <ul class="info-list">
                 <div>
@@ -37,9 +45,9 @@
 
         </div>
 
-        <div class="divider"></div>
+        <div class="divider" *ngIf="!hasError"></div>
 
-        <div class="pokemon-information">
+        <div class="pokemon-information" *ngIf="!hasError">
 
             <ul class="pokemon-info">
                 <li class="name">Nome</li>
