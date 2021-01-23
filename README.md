@@ -50,10 +50,18 @@ This screen will appear if no city was found.
 
 This one if the api key for the OpenweatherMap is invalid.
 
-![Unauthorized](/src/assets/screenshots/unauthorizes.png?raw=true)
+![Unauthorized](/src/assets/screenshots/unauthorized.png?raw=true)
 
 And this if the input has no value inserted.
 
 ![Empty](/src/assets/screenshots/empty.png?raw=true)
 
+
+## Mobile
+
+
+![Mobile Main](/src/assets/screenshots/mobile-main.png?raw=true)
+
+
+![Mobile Result](/src/assets/screenshots/mobile-result.png?raw=true)
 
