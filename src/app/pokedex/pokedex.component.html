@@ -1,18 +1,58 @@
 <section class="pokedex-section">
 
-    <form [formGroup]="formCity" (submit)="getPokemon()">
+    <form 
+        class="form-city"
+        [formGroup]="formCity" 
+        (submit)="getPokemon()"
+    >
 
         <app-form-input
             [control]="controls.cityName"
             [trim]="true"
             type="text"
-            fieldId=""
+            fieldId="cityName"
             label=""
-            name=""
-            placeholder=""
+            name="cityName"
+            placeholder="Insira o nome da cidade..."
+            [hideError]="true"
         ></app-form-input>
 
+        <button type="submit" class="btn-search btn btn-primary">
+           <i class="icon fas fa-search"></i> Search
+        </button>
+
     </form>
+
+    <div class="content">
+
+        <div class="weather-information">
+
+            <ul class="info-list">
+                <div>
+                    <li> <i class="fas fa-building"></i> Cidade </li>
+                    <li> <i class="fas fa-thermometer-quarter"></i> Temperatura: </li>
+                    <li><i class="fa fa-cloud-showers-heavy"></i> Chovendo: </li>
+                </div>
+            </ul>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="pokemon-information">
+
+            <ul class="pokemon-info">
+                <li>Nome</li>
+                <li>Tipo</li>
+            </ul>
+
+            <div class="pokemon">
+
+            </div>
+
+        </div>
+
+    </div>
 
 
 </section>

@@ -24,7 +24,7 @@
     </div>
     
     <div>
-      <small *ngIf="isInvalid()" class="d-inline invalid-feedback">
+      <small *ngIf="isInvalid() && !hideError" class="d-inline invalid-feedback">
         {{ forceErrorMessage || errorMessage }}
       </small>
     </div>

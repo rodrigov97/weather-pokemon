@@ -17,7 +17,8 @@ export class FormInputComponent extends Validations implements OnInit {
   @Input() type: string = '';
   @Input() placeholder: string;
   @Input() control: FormControl;
-  @Input() trim = false;
+  @Input() trim: boolean = false;
+  @Input() hideError: boolean = false;
 
   @Input() forceErrorMessage: string;
 

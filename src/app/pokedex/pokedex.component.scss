@@ -4,11 +4,174 @@
 .pokedex-section {
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
     background-color: #f5f5f5;
+    padding-top: 2rem;
+}
+
+/* Form */
+
+.form-city {
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.form-city .btn-search {
+    height: 45px;
+    border-radius: 100px;
+}
+
+.form-city .btn-search .icon {
+    margin-right: 10px;
+}
+
+/* Content */
+
+.content {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Weather Information */
+
+.weather-information .info-list {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.weather-information .info-list i {
+    width: 40px;
+    text-align: center;
+}
+
+/* Pokemon Information */
+
+.pokemon-information .pokemon-info {
+    height: 100%;
+    list-style: none;
+    display: flex;
 }
 
 @include media-breakpoint-up(lg) {
+    /* Form */
+
+    .form-city {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-city app-form-input {
+        width: 50%;
+    }
+
+    .form-city .btn-search {
+        width: 120px;
+        margin-left: 1rem;
+    }
+
+    /* Content */
+
+    .content {
+        height: calc(100% - 6.875rem);
+        display: flex;
+        align-items: center;
+    }
+
+    /* Weather Information */
+
+    .weather-information {
+        width: 50%;
+        font-size: 22px;
+    }
+
+    .weather-information .info-list {
+        justify-content: center;
+    }
+
+    .weather-information .info-list li {
+        line-height: 70px;
+    }
+
+    .weather-information .info-list i {
+        font-size: 20px;
+    }
+
+    .divider {
+        height: 80%;
+        width: 1px;
+        background-color: $grey;
+    }
+
+    /* Pokemon Information */
+
+    .pokemon-information {
+        height: 80%;
+        width: 50%;
+        padding-top: 1rem;
+    }
+
+    .pokemon-information .pokemon-info {
+        font-size: 22px;
+        justify-content: space-evenly;
+    }
 }
 
 @include media-breakpoint-down(md) {
+    .content {
+        display: flexbox;
+        justify-content: center;
+    }
+    /* Form */
+
+    .form-city {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-city .btn-search {
+        width: 170px;
+        margin-top: 0.5rem;
+    }
+
+    /* Content */
+
+    .content {
+        height: calc(100% - 10.3125rem);
+    }
+
+    /* Weather Information */
+
+    .weather-information {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .weather-information .info-list {
+        padding-left: 20px !important;
+    }
+
+    .weather-information .info-list li {
+        line-height: 50px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    /* Pokemon Information */
+
+    .pokemon-information {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .pokemon-information .pokemon-info {
+        display: block;
+        padding: 0px !important;
+        line-height: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
 }
