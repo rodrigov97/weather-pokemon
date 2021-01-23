@@ -67,7 +67,7 @@ export class PokedexService {
 
     getRandomPokemon(json: any): any {
         var maxNumber = json['pokemon'].length - 1,
-            index = Math.floor(Math.random() * (maxNumber - 0) + 0);
+            index = Math.floor(Math.random() * maxNumber);
 
         return json['pokemon'][index].pokemon;
     }
