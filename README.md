@@ -27,7 +27,7 @@ Run the command `docker-compose up` to initiate the container, if you dont have 
 
 ## With ng serve
 
-Run the command `yarn` to install all project dependencies.
+Run the command `yarn install` to install all project dependencies.
 
 Once the installation is done run the command `ng serve` on the terminal to start the application.
 
