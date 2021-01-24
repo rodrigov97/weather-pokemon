@@ -68,7 +68,6 @@ And this if the input has no value inserted.
 
 ## Mobile
 <p align="center">
-<img src="/src/assets/screenshots/mobile-main.png" alt="Empty" width="auto" height="600"> | <img src="/src/assets/screenshots/mobile-result.png" alt="Empty" width="auto" height="600">
-:-------------------------:|:-------------------------:
+<img src="/src/assets/screenshots/mobile-main.png" alt="Empty" width="auto" height="600"> <img src="/src/assets/screenshots/mobile-result.png" alt="Empty" width="auto" height="600">
 </p>
 
