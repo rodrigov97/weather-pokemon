@@ -6,6 +6,7 @@ import { ErrorScreenComponent } from './error-screen/error-screen.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormInputComponent } from './components/form-input/form-input.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 import { TypesComponent } from './types/types.component';
 // Modules
 import { ReactiveFormsModule } from '@angular/forms';
@@ -18,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         FooterComponent,
         FormInputComponent,
         NavbarComponent,
-        TypesComponent
+        TypesComponent,
+        SpinnerComponent
     ],
     exports: [
         // App
@@ -27,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         FooterComponent,
         FormInputComponent,
         NavbarComponent,
-        TypesComponent
+        TypesComponent,
+        SpinnerComponent
     ],
     imports: [
         // Angular

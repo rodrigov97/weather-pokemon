@@ -23,52 +23,63 @@
 
     </form>
 
-    <div class="content" *ngIf="!isLoading">
+    <div class="content">
 
-        <div class="error-screen" *ngIf="hasError">
-            <app-error-screen [error]="error"></app-error-screen>
-        </div>
+        <ng-container *ngIf="isLoading">
 
-        <div class="error-screen" *ngIf="!hasError && !hasPreviousSearch">
-            <app-empty-screen></app-empty-screen>
-        </div>
+            <div class="loader-screen">
+                <app-spinner></app-spinner>
+            </div>
 
-        <ng-container *ngIf="!hasError && hasPreviousSearch">
+        </ng-container>
+                
+        <ng-container *ngIf="!isLoading">
 
-            <div class="weather-information" >
-
-                <ul class="info-list">
-                    <div>
-                        <li> <i class="fas fa-building"></i> {{weatherData.name}} </li>
-                        <li> <i class="fas fa-thermometer-quarter"></i> {{weatherData.temperature}} ° </li>
-                        <li>
-                            <i class="fa fa-cloud-showers-heavy" *ngIf="weatherData.isRaining"></i> 
-                            <i class="fa fa-cloud-sun" *ngIf="!weatherData.isRaining"></i> 
-                            {{weatherData.isRaining ? weatherData.description : 'Sem chuva'}}
-                        </li>
-                    </div>
-                </ul>
-    
+            <div class="error-screen" *ngIf="hasError">
+                <app-error-screen [error]="error"></app-error-screen>
             </div>
     
-            <div class="divider"></div>
+            <div class="error-screen" *ngIf="!hasError && !hasPreviousSearch">
+                <app-empty-screen></app-empty-screen>
+            </div>
     
-            <div class="pokemon-information">
+            <ng-container *ngIf="!hasError && hasPreviousSearch">
     
-                <ul class="pokemon-info">
-                    <li class="name">{{pokemonData.name}}</li>
-                    <li><app-types [type]="pokemonData.type"></app-types></li>
-                </ul>
+                <div class="weather-information" >
     
-                <div class="pokemon">
-                    <img [src]="pokemonData.image" alt="">
+                    <ul class="info-list">
+                        <div>
+                            <li> <i class="fas fa-building"></i> {{weatherData.name}} </li>
+                            <li> <i class="fas fa-thermometer-quarter"></i> {{weatherData.temperature}} ° </li>
+                            <li>
+                                <i class="fa fa-cloud-showers-heavy" *ngIf="weatherData.isRaining"></i> 
+                                <i class="fa fa-cloud-sun" *ngIf="!weatherData.isRaining"></i> 
+                                {{weatherData.isRaining ? weatherData.description : 'Sem chuva'}}
+                            </li>
+                        </div>
+                    </ul>
+        
+                </div>
+        
+                <div class="divider"></div>
+        
+                <div class="pokemon-information">
+        
+                    <ul class="pokemon-info">
+                        <li class="name">{{pokemonData.name}}</li>
+                        <li><app-types [type]="pokemonData.type"></app-types></li>
+                    </ul>
+        
+                    <div class="pokemon">
+                        <img [src]="pokemonData.image" alt="">
+                    </div>
+        
                 </div>
     
-            </div>
+            </ng-container>
 
         </ng-container>
 
     </div>
-
 
 </section>
