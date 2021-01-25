@@ -1,0 +1,25 @@
+$white: #ffffff;
+
+$blue-grey-dark: #1c313a;
+
+$grey: #808080;
+$grey-light: #e0e0e0;
+$grey-dark: #383838;
+
+$danger: #e71426;
+$success: #13ca66;
+$warning: #e7cc34;
+$info: #017bfe;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 30rem,
+  md: 48rem,
+  lg: 64rem,
+);
+
+$container-max-widths: (
+  sm: 26.25rem,
+  md: 45rem,
+  lg: 60rem,
+);
