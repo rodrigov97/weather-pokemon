@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { ErrorHandlerService } from 'src/app/core/services/error-handler.service';
 import { Validations } from 'src/app/core/services/validation-handler';
 
@@ -16,7 +16,7 @@ export class FormInputComponent extends Validations implements OnInit {
   @Input() name: string = '';
   @Input() type: string = '';
   @Input() placeholder: string;
-  @Input() control: FormControl;
+  @Input() control: UntypedFormControl;
   @Input() trim: boolean = false;
   @Input() hideError: boolean = false;
 

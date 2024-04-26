@@ -1,4 +1,4 @@
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { PokedexService } from './pokedex.service';
 import { Pokemon } from '../core/models/pokemon';
@@ -14,7 +14,7 @@ export class PokedexComponent implements OnInit {
 
   isLoading: boolean = false;
 
-  formCity: FormGroup;
+  formCity: UntypedFormGroup;
 
   hasError: boolean = false;
   error: any;
@@ -25,7 +25,7 @@ export class PokedexComponent implements OnInit {
   pokemonData: Pokemon;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private pokeService: PokedexService,
     private typeHandler: TypeHandlerService
   ) { }
