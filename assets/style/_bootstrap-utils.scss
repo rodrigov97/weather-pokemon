@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+$enable-responsive-font-sizes: true;
+
+$theme-colors: (
+  danger: $danger,
+  success: $success,
+  info: $info
+);
+
