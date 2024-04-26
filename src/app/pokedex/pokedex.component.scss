@@ -149,10 +149,6 @@
 }
 
 @include media-breakpoint-down(md) {
-    .pokedex-section {
-        height: 100dvh;
-    }
-
     .content {
         display: flexbox;
         justify-content: center;
