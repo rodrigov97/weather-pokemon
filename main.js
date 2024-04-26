@@ -126,6 +126,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [{
   path: '',
+  pathMatch: 'full',
+  redirectTo: 'pokedex'
+}, {
+  path: 'pokedex',
   loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./pokedex/pokedex.module */ 5127)).then(l => l.PokedexModule)
 }];
 class AppRoutingModule {
