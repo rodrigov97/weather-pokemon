@@ -1,14 +1,15 @@
 <section class="pokedex-section">
 
-    <form 
+    <form
         class="form-city"
-        [formGroup]="formCity" 
+        [formGroup]="formCity"
         (submit)="getCityWeather()"
     >
 
         <app-form-input
             [control]="controls.cityName"
             [trim]="true"
+            class="city-input"
             type="text"
             fieldId="cityName"
             label=""
@@ -32,21 +33,21 @@
             </div>
 
         </ng-container>
-                
+
         <ng-container *ngIf="!isLoading">
 
             <div class="error-screen" *ngIf="hasError">
                 <app-error-screen [error]="error"></app-error-screen>
             </div>
-    
+
             <div class="error-screen" *ngIf="!hasError && !hasPreviousSearch">
                 <app-empty-screen></app-empty-screen>
             </div>
-    
+
             <ng-container *ngIf="!hasError && hasPreviousSearch">
-    
+
                 <div class="weather-information" >
-    
+
                     <ul class="info-list">
                         <div>
                             <li> <i class="fas fa-building"></i> {{weatherData.name}} </li>
@@ -58,24 +59,24 @@
                             </li>
                         </div>
                     </ul>
-        
+
                 </div>
-        
+
                 <div class="divider"></div>
-        
+
                 <div class="pokemon-information">
-        
+
                     <ul class="pokemon-info">
                         <li class="name">{{pokemonData.name}}</li>
                         <li><app-types [type]="pokemonData.type"></app-types></li>
                     </ul>
-        
-                    <div class="pokemon">
-                        <img [src]="pokemonData.image" alt="">
+
+                    <div *ngIf="pokemonData.image" class="pokemon">
+                        <img [src]="pokemonData.image" alt="pokemon">
                     </div>
-        
+
                 </div>
-    
+
             </ng-container>
 
         </ng-container>
