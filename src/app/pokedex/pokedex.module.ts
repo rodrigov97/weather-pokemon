@@ -10,21 +10,21 @@ import { SharedModule } from '../shared/shared.module';
 import { PokedexService } from './pokedex.service';
 
 @NgModule({
-    declarations: [
-        // App
-        PokedexComponent
-    ],
-    imports: [
-        // Angular
-        CommonModule,
-        ReactiveFormsModule,
-        // App
-        PokedexRoutingModule,
-        SharedModule
-    ],
-    providers: [
-        // App
-        PokedexService
-    ]
+  declarations: [
+    // App
+    PokedexComponent,
+  ],
+  imports: [
+    // Angular
+    CommonModule,
+    ReactiveFormsModule,
+    // App
+    PokedexRoutingModule,
+    SharedModule,
+  ],
+  providers: [
+    // App
+    PokedexService,
+  ],
 })
-export class PokedexModule { }
+export class PokedexModule {}

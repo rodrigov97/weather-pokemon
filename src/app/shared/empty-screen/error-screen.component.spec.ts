@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NavbarComponent } from './navbar.component';
+import { EmptyScreenComponent } from './empty-screen.component';
 
-describe('NavbarComponent', () => {
+describe('EmptyScreenComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NavbarComponent],
+      declarations: [EmptyScreenComponent],
     }).compileComponents();
   });
 
   it('should create the component', () => {
-    const fixture = TestBed.createComponent(NavbarComponent);
+    const fixture = TestBed.createComponent(EmptyScreenComponent);
     const component = fixture.componentInstance;
 
     fixture.detectChanges();

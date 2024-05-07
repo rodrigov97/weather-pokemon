@@ -8,18 +8,29 @@ describe('TypesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TypesComponent ]
-    })
-    .compileComponents();
+      declarations: [TypesComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TypesComponent);
     component = fixture.componentInstance;
+
+    component.type = 'grass';
+
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render grass type icon', () => {
+    const grassComponent = fixture.nativeElement.querySelector('.grass');
+    const textContent = grassComponent.textContent.trim();
+
+    expect(component.type).toEqual('grass');
+    expect(grassComponent).toBeTruthy();
+    expect(textContent).toEqual('Grama');
   });
 });

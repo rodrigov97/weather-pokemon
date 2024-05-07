@@ -1,32 +1,16 @@
-<div [class.lableless]="!label" class="form-group">
-
-    <label [class.is-invalid]="isInvalid()" [for]="fieldId" *ngIf="!!label">
-      {{ label }}
-    </label>
-  
-    <div class="input-group">
-  
-      <ng-container [ngSwitch]="type">
-  
-        <input
-          *ngSwitchCase="'text'"
-          [name]="name"
-          [formControl]="control"
-          [id]="fieldId"
-          [placeholder]="placeholder"
-          [type]="type"
-          class="form-control"
-          (blur)="onBlur()"
-        />
-  
-      </ng-container>
-  
-    </div>
-    
-    <div>
-      <small *ngIf="isInvalid() && !hideError" class="d-inline invalid-feedback">
-        {{ forceErrorMessage || errorMessage }}
-      </small>
-    </div>
+<div [ngClass]="label ? '' : 'lableless'" class="form-group">
+  <label *ngIf="!!label" [for]="fieldId">
+    {{ label }}
+  </label>
+  <div class="input-group">
+    <input
+      [formControl]="control"
+      [id]="fieldId"
+      [name]="name"
+      [placeholder]="placeholder"
+      [type]="type"
+      class="form-control"
+      (blur)="onBlur()"
+    />
+  </div>
 </div>
-  
