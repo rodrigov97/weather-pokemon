@@ -1,35 +1,44 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule, Routes } from '@angular/router';
+
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+
+const mockRoutes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'pokedex',
+  },
+  {
+    path: 'pokedex',
+  },
+];
 
 describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
+      imports: [RouterModule.forRoot(mockRoutes), SharedModule],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
 
-  it(`should have as title 'weather-pokemon'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('weather-pokemon');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('weather-pokemon app is running!');
+  });
+
+  it('should create the app', () => {
+    const mainContainer = fixture.nativeElement.querySelector('.main-section');
+    const content = mainContainer.querySelector('.app-content');
+
+    expect(component).toBeTruthy();
+    expect(mainContainer).toBeTruthy();
+    expect(content).toBeTruthy();
   });
 });

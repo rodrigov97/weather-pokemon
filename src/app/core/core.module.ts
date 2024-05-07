@@ -7,18 +7,17 @@ import { NgModule } from '@angular/core';
 import { ServiceModule } from './services/service.module';
 
 @NgModule({
-    declarations: [
-    ],
-    imports: [
-        // Angular
-        HttpClientModule,
-        // App
-        ServiceModule
-    ],
-    providers: [
-        // App
-        PokemonClient,
-        WeatherClient
-    ]
+  declarations: [],
+  imports: [
+    // Angular
+    HttpClientModule,
+    // App
+    ServiceModule,
+  ],
+  providers: [
+    // App
+    PokemonClient,
+    WeatherClient,
+  ],
 })
-export class CoreModule { }
+export class CoreModule {}
