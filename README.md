@@ -1,6 +1,6 @@
 # WeatherPokemon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6. in a linux Ubuntu 20.04.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6. in a linux Ubuntu 20.04.
 
 Acesse: https://rodrigov97.github.io/weather-pokemon/pokedex
 
